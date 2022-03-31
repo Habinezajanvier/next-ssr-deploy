@@ -1,0 +1,22 @@
+{
+  "name": "next-ssr-deploy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "yarn build && cross-env NODE_ENV=production firebase deploy --only functions,hosting"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.19.0",
+    "firebase-tools": "^10.5.0",
+    "isomorphic-unfetch": "^3.1.0",
+    "next": "^12.1.4",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
+}
